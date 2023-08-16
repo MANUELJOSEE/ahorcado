@@ -8,23 +8,32 @@
   </head>
   <body>
     <div id="mainContainer">
+      <h1 class="titulo">Ahorcado</h1>
+
+      <center>
+        <img class="foto" id="imagen" src="../assets/images/1.png" alt="" />
+      </center>
+
       <div id="top">
-        <div id="dummy"></div>
+        <div id="result"></div>
+        <div id="dummy" style="display: flex"></div>
         <div id="letters"></div>
       </div>
-      
-       <div id="bot"></div>
+      <div class="circulo">
+        <h3 id="contador">7</h3>
+      </div>
     </div>
+    <div id="bot"></div>
+
+    <button id="jugar">voler a jugar</button>
+
+    <div class="loader">
+      <div class="box1"></div>
+      <div class="box2"></div>
+      <div class="box3"></div>
+    </div>
+
     <script type="module" src="../src/index.js"></script>
-    <script type="module" src="../src/panel.js"></script>
+    <!-- <script type="module" src="../src/panel.js"></script> -->
   </body>
-</html> 
-
-
-
-
-
-
-
-
-
+</html>

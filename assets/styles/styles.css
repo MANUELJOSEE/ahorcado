@@ -1,34 +1,393 @@
+body {
+  background-image: url("https://cdn.pixabay.com/photo/2022/07/27/19/17/video-game-7348585_1280.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 #mainContainer {
-  background-color: beige;
+  /* margin: 100px; */
+  color: #e4e4e5;
+
   width: 100%;
-  height: 500px;
+  height: 100%;
+  /* background-image: url("https://cdn.pixabay.com/photo/2016/08/27/11/59/pokemon-1624022_1280.jpg"); */
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
 }
 #top {
-  background-color: red;
+  /* background-color: antiquewhite; */
   width: 80%;
   height: 200px;
 }
 #bot {
-  background-color: black;
+  border-radius: 20px;
+  margin-top: 100px;
+  margin-left: 250px;
+  display: flex;
+  flex-wrap: wrap;
+  /* border: solid 2px aliceblue; */
+  /* background-color: white ; */
   width: 80%;
-  height: 200px;
+  height: 100%;
 }
 
-button{
-  padding: 0.1em 0.6em;
-  border: 1px solid #ccc;
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  box-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2), 0px 0px 0px 2px #fff inset;
+button {
+  font-family: "nombres";
+
+  text-transform: uppercase;
+  display: flex;
+  border-radius: 10px;
+  margin: 20px;
+  background: #fff;
+  color: white;
+  border: 2px solid #ffffff;
+  padding: 16px 20px;
   border-radius: 3px;
+
+  z-index: 1;
+  overflow: hidden;
   display: inline-block;
-  margin: 0px 0.1em;
-  text-shadow: 0px 1px 0px #fff;
-  line-height: 1.4;
-  white-space: nowrap;
-  font-size: 12px;
-  cursor: pointer;
-  width: 80px;
-  height: 30px;
+  content: "";
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIY0Bo6Nnf8AxMcSN7FGyd39Ws1m9jeC8cKQ&usqp=CAU");
+  /* background-image: none; */
+}
+
+button {
+  animation: rotate-top 0.4s linear;
+}
+@keyframes rotate-top {
+  0% {
+    transform: rotate(0);
+    transform-origin: top;
+  }
+  100% {
+    transform: rotate(360deg);
+    transform-origin: top;
+  }
+}
+
+button {
+  animation: shadow-pop-top-right 0.4s linear both;
+}
+@keyframes shadow-pop-top-right {
+  0% {
+    box-shadow: 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e,
+      0 0 #3e3e3e, 0 0 #3e3e3e, 0 0 #3e3e3e;
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    box-shadow: 1px -1px #3e3e3e, 2px -2px #3e3e3e, 3px -3px #3e3e3e,
+      4px -4px #3e3e3e, 5px -5px #3e3e3e, 6px -6px #3e3e3e, 7px -7px #3e3e3e,
+      8px -8px #3e3e3e;
+    transform: translateX(-8px) translateY(8px);
+  }
+}
+
+.titulo {
+  color: aqua;
+  font-size: 3000px;
+}
+
+.rayitas {
+  display: flex;
+  justify-content: center;
+  margin-left: -100px;
+  margin: 70px;
+  color: rgb(255, 255, 255);
+  font-size: 90px;
+}
+
+#dummy {
+  display: flex;
+  justify-content: center;
+  margin-left: 300px;
+}
+@font-face {
+  font-family: "nombres";
+  src: url("../../public/SuperMario256.ttf") format(truetype);
+}
+.titulo {
+  font-family: "nombres";
+  font-size: 500%;
+  display: flex;
+  justify-content: center;
+  color: #f4f9fa;
+}
+.circulo {
+  border: solid 5px rgb(254, 254, 254);
+  margin-top: -300px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.fotos {
+  width: 50px;
+  height: 50px;
+}
+
+#contador {
+  font-size: 50px;
+  color: rgb(43, 196, 220);
+  margin-left: 90px;
+  margin-top: 65px;
+}
+
+#jugar {
+  margin-top: 100px;
+  margin-left: 850px;
+}
+
+/* <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<Caritaaaa<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.loader {
+  margin-top: -300px;
+  width: 112px;
+  height: 112px;
+}
+
+.box1,
+.box2,
+.box3 {
+  border: 16px solid #f5f5f5;
+  box-sizing: border-box;
+  position: absolute;
+  display: block;
+}
+
+.box1 {
+  width: 112px;
+  height: 48px;
+  margin-top: 64px;
+  margin-left: 0px;
+  animation: abox1 4s 1s forwards ease-in-out infinite;
+}
+
+.box2 {
+  width: 48px;
+  height: 48px;
+  margin-top: 0px;
+  margin-left: 0px;
+  animation: abox2 4s 1s forwards ease-in-out infinite;
+}
+
+.box3 {
+  width: 48px;
+  height: 48px;
+  margin-top: 0px;
+  margin-left: 64px;
+  animation: abox3 4s 1s forwards ease-in-out infinite;
+}
+
+@keyframes abox1 {
+  0% {
+    width: 112px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+
+  75% {
+    width: 48px;
+    height: 112px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+}
+
+@keyframes abox2 {
+  0% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  25% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  50% {
+    width: 112px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 0px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  75% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  100% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+}
+
+@keyframes abox3 {
+  0% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  12.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  25% {
+    width: 48px;
+    height: 112px;
+    margin-top: 0px;
+    margin-left: 64px;
+  }
+
+  37.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  50% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  62.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  75% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  87.5% {
+    width: 48px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 64px;
+  }
+
+  100% {
+    width: 112px;
+    height: 48px;
+    margin-top: 64px;
+    margin-left: 0px;
+  }
+}
+/* fin carita<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+#image {
+  margin-top: 70px;
+  margin-left: 750px;
+}
+.foto {
+  max-width: 200px;
+  max-height: 200px;
+  /* display: flex; */
+}
+
+.rojo {
+  background-color: rgb(246, 13, 13);
+}
+.verde{
+  background-color: green;
 }
